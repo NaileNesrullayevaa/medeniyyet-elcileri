@@ -1,0 +1,51 @@
+.footer {
+    position: relative;
+}
+
+.footer_bg {
+    position: absolute;
+    opacity: 0.5;
+    inset: 0;
+    background-image: url('https://ambassador.culture.az/assets/footer_bg-Ih_ZZYIy.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.bottom {
+    button {
+
+   
+        color: white;
+        background-color: #000;
+
+        position: fixed;
+        bottom: 50px;
+        right: 50px;
+        z-index: 999;
+        display: none;
+
+        &.active {
+            display: flex;
+        }
+
+        svg {
+            animation: myAni 2s infinite
+        }
+
+        @keyframes myAni {
+            0%{
+                transform: translateY(0px);
+            }
+
+            50%{
+                transform: translateY(-5px)
+            }
+
+            100% {
+                transform: translateY(0px)
+            }
+        }
+    }
+}
