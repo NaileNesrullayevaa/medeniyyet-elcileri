@@ -21,6 +21,7 @@ const Home = () => {
         videoRef.current.play()
     }
     const [before, setBefore] = useState('all')
+    
     return (
         <div>
             <section className="hero  h-[700px] md:min-h-[950px]" id='home'>
@@ -47,10 +48,9 @@ const Home = () => {
             </section>
             <section className="platform !py-[clamp(60px,8vw,100px)]" id='events'>
                 <div className="content !px-[20px]  lg:w-[70%] lg:!mx-auto">
-                    <h1 className='text-[clamp(28px,4vw,60px)]   text-[#000] items-center flex gap-2'> {platform.map((item, index) => (
+                    <h1 className='text-[clamp(28px,4vw,60px)] flex-wrap  text-[#000] items-center flex gap-2'> {platform.map((item, index) => (
                         <motion.p
                             key={index}
-                         
                             initial={{ y: 0, opacity: 0 }}
                             whileInView={{ y: 0, opacity: 1 }}
                             transition={{
@@ -61,22 +61,7 @@ const Home = () => {
                         >
                             {item}
                         </motion.p>
-                    ))} 
-                    {/* <span>
-                            {platformaLetters2.map((item, index) => (
-                                <motion.span
-                                    key={index}
-                                    initial={{ y: 10, opacity: 0 }}
-                                    whileInView={{ y: 0, opacity: 1 }}
-                                    transition={{
-                                        duration: 0.3,
-                                        delay: index * 0.2
-                                    }}
-                                >
-                                    {item}
-                                </motion.span>
-                            ))}</span> */}
-                            </h1>
+                    ))}                             </h1>
                     <motion.p className='p text-[16px] sm:text-[18px] md:text-[20px]'
                         initial={{ y: 40, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
@@ -186,7 +171,6 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-
             {/* <section className="media relative z-60" id='media'>
                 <h1 className='!pt-[90px] text-center text-[clamp(30px,10vh,128px)] !mb-[-500px] sm:!mb-[-450px] md:!mb-[-400px] lg:!mb-[-300px] xl:!mb-[-200px] !px-5'>
                     Azerbaycan Medeniyyeti qlobal seviyyede temsil <span> olunur</span>
@@ -222,7 +206,6 @@ const Home = () => {
                     </p>
                 </div>
             </section>  */}
-
             <section className="media relative z-60" id='media'>
                 <h1 className='text-center text-[clamp(30px,6vw,100px)] !mb-[-100px] sm:!mb-[-200px] md:!mb-[-200px] lg:!mb-[-200px] xl:!mb-[-200px] !px-5 !pt-[90px]'>
                     {media.map((item, index) => (
@@ -277,8 +260,6 @@ const Home = () => {
                     </motion.p>
                 </div>
             </section>
-
-
             <section className="gallery !py-[clamp(60px,6vw,100px)] w-full md:w-[90%] !mx-auto  !px-5" id='gallery'>
                 <div className="top-box flex md:items-center md:justify-between md:flex-row items-start justify-items-start flex-col gap-4">
                     <div className="title font-light uppercase text-[clamp(24px,4vw,48px)]">
